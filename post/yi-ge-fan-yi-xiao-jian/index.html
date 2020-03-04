@@ -1,22 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://sunlongfei-ai.github.io</id>
-    <title>一只小强强</title>
-    <updated>2020-03-04T11:48:34.991Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://sunlongfei-ai.github.io"/>
-    <link rel="self" href="https://sunlongfei-ai.github.io/atom.xml"/>
-    <subtitle>专注于各个奥利给</subtitle>
-    <logo>https://sunlongfei-ai.github.io/images/avatar.png</logo>
-    <icon>https://sunlongfei-ai.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 一只小强强</rights>
-    <entry>
-        <title type="html"><![CDATA[一个翻译小件]]></title>
-        <id>https://sunlongfei-ai.github.io/post/yi-ge-fan-yi-xiao-jian/</id>
-        <link href="https://sunlongfei-ai.github.io/post/yi-ge-fan-yi-xiao-jian/">
-        </link>
-        <updated>2020-03-04T10:35:45.000Z</updated>
-        <content type="html"><![CDATA[<p>写在开始的话🤝</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>一个翻译小件 | 一只小强强</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://sunlongfei-ai.github.io/favicon.ico?v=1583322496324">
+<link rel="stylesheet" href="https://sunlongfei-ai.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="写在开始的话🤝
+这篇python写的请求主要是对现有的或者说对网上已经实现的api
+调用，或者说请求。
+用到的库也比较简单主要是requests库，，
+聚焦爬虫而已啦，尊重robots请求就看个人的意志啦！
+
+本篇主要是：
+request..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://sunlongfei-ai.github.io">
+        <img src="https://sunlongfei-ai.github.io/images/avatar.png?v=1583322496324" class="site-logo">
+        <h1 class="site-title">一只小强强</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://sunlongfei-ai.github.io" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      专注于各个奥利给
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://sunlongfei-ai.github.io" target="_blank">Gridea</a> | <a class="rss" href="https://sunlongfei-ai.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">一个翻译小件</h2>
+            <div class="post-date">2020-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <p>写在开始的话🤝</p>
 <p>这篇python写的请求主要是对现有的或者说对网上已经实现的api<br>
 调用，或者说请求。<br>
 用到的库也比较简单主要是requests库，，<br>
@@ -191,6 +280,42 @@ button1.place(x=820, y=600,anchor='se')
 window.mainloop()
 </code></pre>
 <p>是比较简单的啊，就是界面不太擅长诶！！！！</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>
