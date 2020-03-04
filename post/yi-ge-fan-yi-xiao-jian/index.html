@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://sunlongfei-ai.github.io/favicon.ico?v=1583326964076">
+<link rel="shortcut icon" href="https://sunlongfei-ai.github.io/favicon.ico?v=1583328821010">
 <link rel="stylesheet" href="https://sunlongfei-ai.github.io/styles/main.css">
 
 
@@ -41,7 +41,7 @@ request..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://sunlongfei-ai.github.io">
-        <img src="https://sunlongfei-ai.github.io/images/avatar.png?v=1583326964076" class="site-logo">
+        <img src="https://sunlongfei-ai.github.io/images/avatar.png?v=1583328821010" class="site-logo">
         <h1 class="site-title">一只小强强</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -126,24 +126,27 @@ requests  tkinter fake_useragent<br>
 <img src="https://sunlongfei-ai.github.io/post-images/1583321411610.png" alt="" loading="lazy"></p>
 <p>以下正文：<br>
 <img src="https://sunlongfei-ai.github.io/post-images/1583321433370.png" alt="" loading="lazy"></p>
-<p>网址：<br>
-http://fanyi.youdao.com/<br>
-先帖出请求网址或者说api<br>
-url = 'http://fanyi.youdao.com/translate?smartresult=dictsmartresult=rule'<br>
-以上网址可自主请求</p>
+<p>网址：</p>
+<pre><code>http://fanyi.youdao.com/
+</code></pre>
+<p>先帖出请求网址或者说api</p>
+<pre><code>url = 'http://fanyi.youdao.com/translate?smartresult=dictsmartresult=rule'
+</code></pre>
+<p>以上网址可自主请求</p>
 <p>不过以上网址是post请求</p>
 <p>原来的网址又免不了js破解<br>
 以大家，额不，以我比较懒惰的性格这种吃力不讨好的事情就算了<br>
 什么js加密，有原来网址api接口干嘛不用<br>
 <img src="https://sunlongfei-ai.github.io/post-images/1583321840908.png" alt="" loading="lazy"></p>
-<p>那咱就先将data参数列举一下吧：<br>
-data = {<br>
-'i': content,<br>
-'from': 'AUTO',<br>
-'to': 'AUTO',<br>
-'smartresult': 'dict',<br>
-'client': 'fanyideskweb',</p>
-<pre><code># 'salt': '15827948097626',
+<p>那咱就先将data参数列举一下吧：</p>
+<pre><code>data = {
+'i': content,
+'from': 'AUTO',
+'to': 'AUTO',
+'smartresult': 'dict',
+'client': 'fanyideskweb',
+
+# 'salt': '15827948097626',
 # 'sign': 'b9989465680493e466593f9539e05796',
 # 'ts': '1582794809762',
 # 'bv': '767d6b27f6caf88200654eb2a7b6e2eb',
@@ -156,12 +159,13 @@ data = {<br>
 
     以上即为请求参数
 </code></pre>
-<p>那么翻译参数怎么传呢？<br>
-#获取输入的内容<br>
-content = entry.get()<br>
-#去空格 split是切割<br>
-content = content.strip()</p>
-<pre><code>#先解释一下entry吧 就是一个列表框
+<p>那么翻译参数怎么传呢？</p>
+<pre><code>#获取输入的内容
+content = entry.get()
+#去空格 split是切割
+content = content.strip()
+
+#先解释一下entry吧 就是一个列表框
 从里面获取文字，毕竟是用户输入，交互式界面嘛
 
 req['translateResult'][0][0]['tgt']

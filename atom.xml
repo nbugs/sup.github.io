@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunlongfei-ai.github.io</id>
     <title>一只小强强</title>
-    <updated>2020-03-04T13:18:21.752Z</updated>
+    <updated>2020-03-04T13:33:49.161Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunlongfei-ai.github.io"/>
     <link rel="self" href="https://sunlongfei-ai.github.io/atom.xml"/>
@@ -493,24 +493,27 @@ requests  tkinter fake_useragent<br>
 <img src="https://sunlongfei-ai.github.io/post-images/1583321411610.png" alt="" loading="lazy"></p>
 <p>以下正文：<br>
 <img src="https://sunlongfei-ai.github.io/post-images/1583321433370.png" alt="" loading="lazy"></p>
-<p>网址：<br>
-http://fanyi.youdao.com/<br>
-先帖出请求网址或者说api<br>
-url = 'http://fanyi.youdao.com/translate?smartresult=dictsmartresult=rule'<br>
-以上网址可自主请求</p>
+<p>网址：</p>
+<pre><code>http://fanyi.youdao.com/
+</code></pre>
+<p>先帖出请求网址或者说api</p>
+<pre><code>url = 'http://fanyi.youdao.com/translate?smartresult=dictsmartresult=rule'
+</code></pre>
+<p>以上网址可自主请求</p>
 <p>不过以上网址是post请求</p>
 <p>原来的网址又免不了js破解<br>
 以大家，额不，以我比较懒惰的性格这种吃力不讨好的事情就算了<br>
 什么js加密，有原来网址api接口干嘛不用<br>
 <img src="https://sunlongfei-ai.github.io/post-images/1583321840908.png" alt="" loading="lazy"></p>
-<p>那咱就先将data参数列举一下吧：<br>
-data = {<br>
-'i': content,<br>
-'from': 'AUTO',<br>
-'to': 'AUTO',<br>
-'smartresult': 'dict',<br>
-'client': 'fanyideskweb',</p>
-<pre><code># 'salt': '15827948097626',
+<p>那咱就先将data参数列举一下吧：</p>
+<pre><code>data = {
+'i': content,
+'from': 'AUTO',
+'to': 'AUTO',
+'smartresult': 'dict',
+'client': 'fanyideskweb',
+
+# 'salt': '15827948097626',
 # 'sign': 'b9989465680493e466593f9539e05796',
 # 'ts': '1582794809762',
 # 'bv': '767d6b27f6caf88200654eb2a7b6e2eb',
@@ -523,12 +526,13 @@ data = {<br>
 
     以上即为请求参数
 </code></pre>
-<p>那么翻译参数怎么传呢？<br>
-#获取输入的内容<br>
-content = entry.get()<br>
-#去空格 split是切割<br>
-content = content.strip()</p>
-<pre><code>#先解释一下entry吧 就是一个列表框
+<p>那么翻译参数怎么传呢？</p>
+<pre><code>#获取输入的内容
+content = entry.get()
+#去空格 split是切割
+content = content.strip()
+
+#先解释一下entry吧 就是一个列表框
 从里面获取文字，毕竟是用户输入，交互式界面嘛
 
 req['translateResult'][0][0]['tgt']
