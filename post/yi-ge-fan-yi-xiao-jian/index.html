@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://sunlongfei-ai.github.io/favicon.ico?v=1583322496324">
+<link rel="shortcut icon" href="https://sunlongfei-ai.github.io/favicon.ico?v=1583322677545">
 <link rel="stylesheet" href="https://sunlongfei-ai.github.io/styles/main.css">
 
 
@@ -35,7 +35,7 @@ request..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://sunlongfei-ai.github.io">
-        <img src="https://sunlongfei-ai.github.io/images/avatar.png?v=1583322496324" class="site-logo">
+        <img src="https://sunlongfei-ai.github.io/images/avatar.png?v=1583322677545" class="site-logo">
         <h1 class="site-title">一只小强强</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -134,16 +134,16 @@ data = {<br>
 'to': 'AUTO',<br>
 'smartresult': 'dict',<br>
 'client': 'fanyideskweb',</p>
-<pre><code>        # 'salt': '15827948097626',
-        # 'sign': 'b9989465680493e466593f9539e05796',
-        # 'ts': '1582794809762',
-        # 'bv': '767d6b27f6caf88200654eb2a7b6e2eb',
+<pre><code># 'salt': '15827948097626',
+# 'sign': 'b9989465680493e466593f9539e05796',
+# 'ts': '1582794809762',
+# 'bv': '767d6b27f6caf88200654eb2a7b6e2eb',
 
-        'doctype': 'json',
-        'version': '2.1',
-        'keyfrom': 'fanyi.web',
-        'action': 'FY_BY_REALTlME'
-    }
+'doctype': 'json',
+'version': '2.1',
+'keyfrom': 'fanyi.web',
+'action': 'FY_BY_REALTlME'
+}
 
     以上即为请求参数
 </code></pre>
@@ -154,9 +154,10 @@ content = entry.get()<br>
 content = content.strip()</p>
 <pre><code>#先解释一下entry吧 就是一个列表框
 从里面获取文字，毕竟是用户输入，交互式界面嘛
+
+req['translateResult'][0][0]['tgt']
+以上用来获取网页返回的翻译参数
 </code></pre>
-<p>req['translateResult'][0][0]['tgt']<br>
-以上用来获取网页返回的翻译参数</p>
 <p>好了，请求网页参数的代码就这样了，好像是比较简单的嘛</p>
 <p>什么js加密，还没api接口来的快嘛！</p>
 <p>接下来就谈谈tkinter界面问题吧</p>

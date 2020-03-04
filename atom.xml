@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunlongfei-ai.github.io</id>
     <title>一只小强强</title>
-    <updated>2020-03-04T11:48:34.991Z</updated>
+    <updated>2020-03-04T11:51:20.592Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunlongfei-ai.github.io"/>
     <link rel="self" href="https://sunlongfei-ai.github.io/atom.xml"/>
@@ -45,16 +45,16 @@ data = {<br>
 'to': 'AUTO',<br>
 'smartresult': 'dict',<br>
 'client': 'fanyideskweb',</p>
-<pre><code>        # 'salt': '15827948097626',
-        # 'sign': 'b9989465680493e466593f9539e05796',
-        # 'ts': '1582794809762',
-        # 'bv': '767d6b27f6caf88200654eb2a7b6e2eb',
+<pre><code># 'salt': '15827948097626',
+# 'sign': 'b9989465680493e466593f9539e05796',
+# 'ts': '1582794809762',
+# 'bv': '767d6b27f6caf88200654eb2a7b6e2eb',
 
-        'doctype': 'json',
-        'version': '2.1',
-        'keyfrom': 'fanyi.web',
-        'action': 'FY_BY_REALTlME'
-    }
+'doctype': 'json',
+'version': '2.1',
+'keyfrom': 'fanyi.web',
+'action': 'FY_BY_REALTlME'
+}
 
     以上即为请求参数
 </code></pre>
@@ -65,9 +65,10 @@ content = entry.get()<br>
 content = content.strip()</p>
 <pre><code>#先解释一下entry吧 就是一个列表框
 从里面获取文字，毕竟是用户输入，交互式界面嘛
+
+req['translateResult'][0][0]['tgt']
+以上用来获取网页返回的翻译参数
 </code></pre>
-<p>req['translateResult'][0][0]['tgt']<br>
-以上用来获取网页返回的翻译参数</p>
 <p>好了，请求网页参数的代码就这样了，好像是比较简单的嘛</p>
 <p>什么js加密，还没api接口来的快嘛！</p>
 <p>接下来就谈谈tkinter界面问题吧</p>
