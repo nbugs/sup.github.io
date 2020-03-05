@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunlongfei-ai.github.io</id>
     <title>一只小强强</title>
-    <updated>2020-03-05T13:56:10.100Z</updated>
+    <updated>2020-03-05T14:01:33.192Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunlongfei-ai.github.io"/>
     <link rel="self" href="https://sunlongfei-ai.github.io/atom.xml"/>
@@ -85,7 +85,7 @@ yun = wordcloud.WordCloud(margin=1,mask = mask,scale=16,background_color=&quot;w
         <id>https://sunlongfei-ai.github.io/post/matplotlib-shi-me-shu-ju-fen-xi/</id>
         <link href="https://sunlongfei-ai.github.io/post/matplotlib-shi-me-shu-ju-fen-xi/">
         </link>
-        <updated>2020-03-04T12:38:39.000Z</updated>
+        <updated>2020-03-03T12:38:39.000Z</updated>
         <content type="html"><![CDATA[<p>添加标题-title</p>
 <pre><code>import numpy as np
 import matplotlib.pyplot as plt
@@ -371,7 +371,7 @@ plt.show()
         <id>https://sunlongfei-ai.github.io/post/fen-xiang-kuai-le-zhan-dian/</id>
         <link href="https://sunlongfei-ai.github.io/post/fen-xiang-kuai-le-zhan-dian/">
         </link>
-        <updated>2020-03-04T11:54:17.000Z</updated>
+        <updated>2020-03-02T11:54:17.000Z</updated>
         <content type="html"><![CDATA[<p>搞学习</p>
 <pre><code>CSDN： https://www.csdn.net/
 TED（最优质的演讲）：https://www.ted.com/
@@ -550,7 +550,7 @@ https://www.ssyer.com/
         <id>https://sunlongfei-ai.github.io/post/yi-ge-fan-yi-xiao-jian/</id>
         <link href="https://sunlongfei-ai.github.io/post/yi-ge-fan-yi-xiao-jian/">
         </link>
-        <updated>2020-03-04T10:35:45.000Z</updated>
+        <updated>2020-03-01T10:35:45.000Z</updated>
         <content type="html"><![CDATA[<p>写在开始的话🤝</p>
 <p>这篇python写的请求主要是对现有的或者说对网上已经实现的api<br>
 调用，或者说请求。<br>
