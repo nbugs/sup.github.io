@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于本博 | 一只小强强</title>
+<title>词云？ 看看别人是怎么做的吧 | 一只小强强</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -24,16 +24,14 @@
 
 
 
-    <meta name="description" content="只是一介小生，不是布衣呀！
-但是，浏览本博网页为什么不关注本博呢！
-https://sunlongfei-ai.github.io
-本博网址就在这儿了
+    <meta name="description" content="写在开始的话：
+用到的库：
+requests  json  wordcloud  matplotlib
 
-建立本博呢是出于兴趣，但是我会对她负责到底的！！
-
-还有，本博刚刚开张
-目前呢只在py..." />
-    <meta name="keywords" content="稍微关于我的" />
+接下来就是我们的疫情数据源了，毕竟是个人所写的
+没有数据来源，也只能请求别人的api来获取数据了
+https://api.yimian..." />
+    <meta name="keywords" content="python" />
   </head>
   <body>
     <div id="app" class="main">
@@ -108,37 +106,95 @@ https://sunlongfei-ai.github.io
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于本博</h2>
-            <div class="post-date">2020-03-01</div>
+            <h2 class="post-title">词云？ 看看别人是怎么做的吧</h2>
+            <div class="post-date">2020-03-04</div>
             
-              <div class="feature-container" style="background-image: url('https://sunlongfei-ai.github.io/post-images/guan-yu-ben-bo.jpeg')">
+              <div class="feature-container" style="background-image: url('https://sunlongfei-ai.github.io/post-images/ci-yun-kan-kan-bie-ren-shi-zen-me-zuo-de-ba.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>只是一介小生，不是布衣呀！</p>
-<p>但是，浏览本博网页为什么不关注本博呢！</p>
-<pre><code>https://sunlongfei-ai.github.io
-本博网址就在这儿了
+              <p>写在开始的话：</p>
+<pre><code>用到的库：
+requests  json  wordcloud  matplotlib
 </code></pre>
-<p>建立本博呢是出于兴趣，但是我会对她负责到底的！！<br>
-<img src="https://sunlongfei-ai.github.io/post-images/1583323785481.png" alt="" loading="lazy"></p>
-<p>还有，本博刚刚开张<br>
-目前呢只在python领域里爬来爬去，一望不知尽头啊<br>
-不过也有一点小小成就。</p>
-<pre><code>QQ：1761152970
-微信呢，本博刚开张就先不透漏了。
+<p>接下来就是我们的疫情数据源了，毕竟是个人所写的<br>
+没有数据来源，也只能请求别人的api来获取数据了</p>
+<pre><code>https://api.yimian.xyz/coro
+</code></pre>
+<p>然后访问该api呢，会发现是json格式的，所以就需要导入<br>
+json库了，毕竟</p>
+<pre><code>json.loads() # 是用来转换json格式的 方法
+</code></pre>
+<p>然后呢，数据就都在里面了，请求一下<br>
+另外，一个json转换网站帖一下：</p>
+<pre><code>https://www.json.cn/
+data = requests.get(url,headers = {&quot;User-Agent&quot;:UserAgent().random}).text
+</code></pre>
+<p>就来取一下数据</p>
+<pre><code>for datas in json_data:
+    for c in datas['cities']:
+        cityName = c['cityName']
+        cCount = c['confirmedCount']
+        sCount = c['suspectedCount']
+        total = int(cCount) + int(sCount)
+        city_dict[cityName] = total
+</code></pre>
+<p>然后就会报错，因为有的数据不是这样格式的，所以修改<br>
+一下格式，加上判断</p>
+<pre><code>city_dict = {}
+json_data = json.loads(data)
+for datas in json_data:
+    if 'cities' in datas:
+        for c in datas['cities']:
+            cityName = c['cityName']
+            cCount = c['confirmedCount']
+            sCount = c['suspectedCount']
+            total = int(cCount) + int(sCount)
+            city_dict[cityName] = total
+    else:
+        cityName = datas['provinceName']
+        cCount = datas['confirmedCount']
+        sCount = datas['suspectedCount']
+        total = int(cCount) + int(sCount)
+        city_dict[cityName] = total  
+</code></pre>
+<p>既然数据已经取出来了，那就不是要任人宰割了？</p>
+<pre><code>#调整图片清晰度：scale属性，该值越大越清楚，我设置的是scale=32
+#margin:词间间距
+#mode:颜色模式默认&quot;RGB&quot;，想弄透明背景需要选择&quot;RGBA&quot;，但是呢，透明图形不是好整的，因为这里有一个小小的bug，你需要设置background_color=None，还不能设置长宽
+yun = wordcloud.WordCloud(margin=1,scale=16,background_color=&quot;white&quot;, mode=&quot;RGBA&quot; ,font_path='C:\Windows\Fonts\&quot;填入自己电脑字体文件即可&quot;')
+yun.generate_from_frequencies(frequencies=city_dict)
+plt.figure(figsize=(15,8),dpi=80)
+plt.imshow(yun,interpolation='bilinear')
+plt.axis('off')#关闭坐标
+plt.show()
+</code></pre>
+<p>最后加上想要的图形需要numpy库和图像处理PIL</p>
+<pre><code>import numpy as np
+import PIL#做图像
+mask = np.array(PIL.Image.open(r'{}')) # 填入想要图片
+yun = wordcloud.WordCloud(margin=1,mask = mask,scale=16,background_color=&quot;white&quot;,mode=&quot;RGBA&quot; ,font_path='C:\Windows\Fonts\&quot;填入自己电脑字体文件即可&quot;') # 这里传入mask参数即可
 </code></pre>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://sunlongfei-ai.github.io/tag/mMeC4XrjR/" class="tag">
-                    稍微关于我的
+                  <a href="https://sunlongfei-ai.github.io/tag/一个翻译小件/" class="tag">
+                    python
                   </a>
                 
               </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://sunlongfei-ai.github.io/post/matplotlib-shi-me-shu-ju-fen-xi/">
+                  <h3 class="post-title">
+                    matplotlib 什么？数据分析
+                  </h3>
+                </a>
+              </div>
             
 
             

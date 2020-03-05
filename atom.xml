@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunlongfei-ai.github.io</id>
     <title>一只小强强</title>
-    <updated>2020-03-04T14:28:00.839Z</updated>
+    <updated>2020-03-05T03:14:30.782Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunlongfei-ai.github.io"/>
     <link rel="self" href="https://sunlongfei-ai.github.io/atom.xml"/>
@@ -10,6 +10,76 @@
     <logo>https://sunlongfei-ai.github.io/images/avatar.png</logo>
     <icon>https://sunlongfei-ai.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 一只小强强</rights>
+    <entry>
+        <title type="html"><![CDATA[词云？ 看看别人是怎么做的吧]]></title>
+        <id>https://sunlongfei-ai.github.io/post/ci-yun-kan-kan-bie-ren-shi-zen-me-zuo-de-ba/</id>
+        <link href="https://sunlongfei-ai.github.io/post/ci-yun-kan-kan-bie-ren-shi-zen-me-zuo-de-ba/">
+        </link>
+        <updated>2020-03-04T13:22:12.000Z</updated>
+        <content type="html"><![CDATA[<p>写在开始的话：</p>
+<pre><code>用到的库：
+requests  json  wordcloud  matplotlib
+</code></pre>
+<p>接下来就是我们的疫情数据源了，毕竟是个人所写的<br>
+没有数据来源，也只能请求别人的api来获取数据了</p>
+<pre><code>https://api.yimian.xyz/coro
+</code></pre>
+<p>然后访问该api呢，会发现是json格式的，所以就需要导入<br>
+json库了，毕竟</p>
+<pre><code>json.loads() # 是用来转换json格式的 方法
+</code></pre>
+<p>然后呢，数据就都在里面了，请求一下<br>
+另外，一个json转换网站帖一下：</p>
+<pre><code>https://www.json.cn/
+data = requests.get(url,headers = {&quot;User-Agent&quot;:UserAgent().random}).text
+</code></pre>
+<p>就来取一下数据</p>
+<pre><code>for datas in json_data:
+    for c in datas['cities']:
+        cityName = c['cityName']
+        cCount = c['confirmedCount']
+        sCount = c['suspectedCount']
+        total = int(cCount) + int(sCount)
+        city_dict[cityName] = total
+</code></pre>
+<p>然后就会报错，因为有的数据不是这样格式的，所以修改<br>
+一下格式，加上判断</p>
+<pre><code>city_dict = {}
+json_data = json.loads(data)
+for datas in json_data:
+    if 'cities' in datas:
+        for c in datas['cities']:
+            cityName = c['cityName']
+            cCount = c['confirmedCount']
+            sCount = c['suspectedCount']
+            total = int(cCount) + int(sCount)
+            city_dict[cityName] = total
+    else:
+        cityName = datas['provinceName']
+        cCount = datas['confirmedCount']
+        sCount = datas['suspectedCount']
+        total = int(cCount) + int(sCount)
+        city_dict[cityName] = total  
+</code></pre>
+<p>既然数据已经取出来了，那就不是要任人宰割了？</p>
+<pre><code>#调整图片清晰度：scale属性，该值越大越清楚，我设置的是scale=32
+#margin:词间间距
+#mode:颜色模式默认&quot;RGB&quot;，想弄透明背景需要选择&quot;RGBA&quot;，但是呢，透明图形不是好整的，因为这里有一个小小的bug，你需要设置background_color=None，还不能设置长宽
+yun = wordcloud.WordCloud(margin=1,scale=16,background_color=&quot;white&quot;, mode=&quot;RGBA&quot; ,font_path='C:\Windows\Fonts\&quot;填入自己电脑字体文件即可&quot;')
+yun.generate_from_frequencies(frequencies=city_dict)
+plt.figure(figsize=(15,8),dpi=80)
+plt.imshow(yun,interpolation='bilinear')
+plt.axis('off')#关闭坐标
+plt.show()
+</code></pre>
+<p>最后加上想要的图形需要numpy库和图像处理PIL</p>
+<pre><code>import numpy as np
+import PIL#做图像
+mask = np.array(PIL.Image.open(r'{}')) # 填入想要图片
+yun = wordcloud.WordCloud(margin=1,mask = mask,scale=16,background_color=&quot;white&quot;,mode=&quot;RGBA&quot; ,font_path='C:\Windows\Fonts\&quot;填入自己电脑字体文件即可&quot;') # 这里传入mask参数即可
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[matplotlib 什么？数据分析]]></title>
         <id>https://sunlongfei-ai.github.io/post/matplotlib-shi-me-shu-ju-fen-xi/</id>
