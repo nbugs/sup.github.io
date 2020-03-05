@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>小小福利站 | 一只小强强</title>
+<title>此月  | 一只小强强</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,13 +12,26 @@
 <link rel="stylesheet" href="https://sunlongfei-ai.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
-    <meta name="description" content="专注于各个奥利给">
+    <meta name="description" content="展露芳华，春晓不知其明，唯晚知其独乐。
+门前的杨柳顾不得冬日之寒，也迷上月之惊艳。这中
+之了，似也唯有万物能解。
+为之倾心的微风，扫过各处，带来让人陶醉的气息，
+也没能带走那张薄薄的面纱。
+在这零零星星的，灰灰暗暗的夜里，蜷缩着的不只是
+这..." />
+    <meta name="keywords" content="生活点滴" />
   </head>
   <body>
     <div id="app" class="main">
@@ -98,28 +111,50 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 小小福利站</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://sunlongfei-ai.github.io/post/fen-xiang-kuai-le-zhan-dian/">
-                  <h2 class="post-title">分享快乐站点？！</h2>
-                </a>
-                <div class="post-date">
-                  2020-03-04
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">此月 </h2>
+            <div class="post-date">2020-03-07</div>
+            
+            <div class="post-content" v-pre>
+              <p>展露芳华，春晓不知其明，唯晚知其独乐。</p>
+<p>门前的杨柳顾不得冬日之寒，也迷上月之惊艳。这中<br>
+之了，似也唯有万物能解。</p>
+<p>为之倾心的微风，扫过各处，带来让人陶醉的气息，<br>
+也没能带走那张薄薄的面纱。</p>
+<p>在这零零星星的，灰灰暗暗的夜里，蜷缩着的不只是<br>
+这里的生灵，冬梅也放下了他的骄傲，留下她独自守<br>
+在星空。</p>
+<p>迷了路的小家伙们，也不知道跑到哪里去了，这广寒<br>
+宫中，也只有玉兔守着偌大的药宫。</p>
+<p>兢兢业业的北斗勺子，也别游戏人间了，看看漫天星<br>
+空哪里少得了你的守护。</p>
+<p>此月啊，显得那么高，显得那么冷，冰山一般似乎也<br>
+不为过，那种朦朦胧胧的，让人情不自禁的记下那张<br>
+面容，不似雍容华贵，更像是久居仙宫的仙子。</p>
+<p>莫名的，可又真真切切的看到了，似有若无的孤寂，<br>
+寂然，是在等谁吗？应该是的吧。</p>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://sunlongfei-ai.github.io/tag/-24uYsGI1/" class="tag">
+                    生活点滴
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -145,6 +180,29 @@ var app = new Vue({
     hljs.initHighlightingOnLoad()
   </script>
 
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '70eaebc146ae2cc3ec5a',
+        clientSecret: '2ec735868f874c76407ca3c60f3ca7cb8e489555',
+        repo: 'sunlongfei-ai.github.io',
+        owner: 'SunLongFei-ai',
+        admin: ['SunLongFei-ai'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
