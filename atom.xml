@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunlongfei-ai.github.io</id>
     <title>一只小强强</title>
-    <updated>2020-03-05T03:17:11.868Z</updated>
+    <updated>2020-03-05T04:41:51.424Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunlongfei-ai.github.io"/>
     <link rel="self" href="https://sunlongfei-ai.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://sunlongfei-ai.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 一只小强强</rights>
     <entry>
-        <title type="html"><![CDATA[词云？ 看看别人是怎么做的吧]]></title>
+        <title type="html"><![CDATA[词云？]]></title>
         <id>https://sunlongfei-ai.github.io/post/ci-yun-kan-kan-bie-ren-shi-zen-me-zuo-de-ba/</id>
         <link href="https://sunlongfei-ai.github.io/post/ci-yun-kan-kan-bie-ren-shi-zen-me-zuo-de-ba/">
         </link>
