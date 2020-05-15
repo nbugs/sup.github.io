@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | 一只小强强</title>
+<title>关于本博 | 一只小强强</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,13 +12,29 @@
 <link rel="stylesheet" href="https://sunlongfei-ai.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
-    <meta name="description" content="专注于各个奥利给">
+    <meta name="description" content="只是一介小生，不是布衣呀！
+https://sunlongfei-ai.github.io
+本博网址就在这儿了
+
+建立本博呢是出于无聊。
+
+QQ：1761152970
+微信呢，本博刚开张就先不透漏了。
+
+..." />
+    <meta name="keywords" content="稍微关于我的" />
   </head>
   <body>
     <div id="app" class="main">
@@ -98,40 +114,45 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">关于本博</h2>
+            <div class="post-date">2020-03-01</div>
+            
+              <div class="feature-container" style="background-image: url('https://sunlongfei-ai.github.io/post-images/guan-yu-ben-bo.jpeg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>只是一介小生，不是布衣呀！</p>
+<pre><code>https://sunlongfei-ai.github.io
+本博网址就在这儿了
+</code></pre>
+<p>建立本博呢是出于无聊。<br>
+<img src="https://sunlongfei-ai.github.io/post-images/1583323785481.png" alt="" loading="lazy"></p>
+<pre><code>QQ：1761152970
+微信呢，本博刚开张就先不透漏了。
+</code></pre>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2020</h2>
+              <div class="tag-container">
+                
+                  <a href="https://sunlongfei-ai.github.io/mMeC4XrjR/" class="tag">
+                    稍微关于我的
+                  </a>
+                
+              </div>
+            
+            
+
+            
               
-                
-                  <article class="post">
-                    <a href="https://sunlongfei-ai.github.io/ma-yuan/">
-                      <h2 class="post-title">
-                        马原
-                      </h2>
-                    </a>
-                  </article>
-                
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-                
-                  <article class="post">
-                    <a href="https://sunlongfei-ai.github.io/guan-yu-ben-bo/">
-                      <h2 class="post-title">
-                        关于本博
-                      </h2>
-                    </a>
-                  </article>
-                
+
               
             
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
@@ -157,6 +178,29 @@ var app = new Vue({
     hljs.initHighlightingOnLoad()
   </script>
 
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '70eaebc146ae2cc3ec5a',
+        clientSecret: '2ec735868f874c76407ca3c60f3ca7cb8e489555',
+        repo: 'sunlongfei-ai.github.io',
+        owner: 'SunLongFei-ai',
+        admin: ['SunLongFei-ai'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

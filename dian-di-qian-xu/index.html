@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | 一只小强强</title>
+<title>点滴前序 | 一只小强强</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,13 +12,31 @@
 <link rel="stylesheet" href="https://sunlongfei-ai.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
-    <meta name="description" content="专注于各个奥利给">
+    <meta name="description" content="写在开始的话：
+没有什么特别关注的
+所以点滴系列就不以文章展示了
+有心的，或者说比较有空的
+可以翻翻看看我的絮絮叨叨
+在这里
+没有什么别的事情
+就像是
+一个陌生的朋友介绍着他的某一面
+了解与否都不重要
+特别开出这个空间
+或许是在嘈杂纷扰的城..." />
+    <meta name="keywords" content="生活点滴" />
   </head>
   <body>
     <div id="app" class="main">
@@ -98,40 +116,57 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">点滴前序</h2>
+            <div class="post-date">2020-03-05</div>
+            
+            <div class="post-content" v-pre>
+              <p><strong>写在开始的话：<br>
+没有什么特别关注的<br>
+所以点滴系列就不以文章展示了<br>
+有心的，或者说比较有空的<br>
+可以翻翻看看我的絮絮叨叨<br>
+在这里<br>
+没有什么别的事情<br>
+就像是<br>
+一个陌生的朋友介绍着他的某一面<br>
+了解与否都不重要<br>
+特别开出这个空间<br>
+或许是在嘈杂纷扰的城市里<br>
+找一个心安的地方<br>
+有一些宁静<br>
+多一分快乐<br>
+或许在这里还会找到相似的地方<br>
+走走停停<br>
+也会<br>
+欢欢喜喜<br>
+或许<br>
+这里只是我一个人<br>
+也或许某一天角落里<br>
+它被人发现<br>
+琳琅满目</strong></p>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2020</h2>
+              <div class="tag-container">
+                
+                  <a href="https://sunlongfei-ai.github.io/-24uYsGI1/" class="tag">
+                    生活点滴
+                  </a>
+                
+              </div>
+            
+            
+
+            
               
-                
-                  <article class="post">
-                    <a href="https://sunlongfei-ai.github.io/ma-yuan/">
-                      <h2 class="post-title">
-                        马原
-                      </h2>
-                    </a>
-                  </article>
-                
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-                
-                  <article class="post">
-                    <a href="https://sunlongfei-ai.github.io/guan-yu-ben-bo/">
-                      <h2 class="post-title">
-                        关于本博
-                      </h2>
-                    </a>
-                  </article>
-                
+
               
             
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
@@ -157,6 +192,29 @@ var app = new Vue({
     hljs.initHighlightingOnLoad()
   </script>
 
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '70eaebc146ae2cc3ec5a',
+        clientSecret: '2ec735868f874c76407ca3c60f3ca7cb8e489555',
+        repo: 'sunlongfei-ai.github.io',
+        owner: 'SunLongFei-ai',
+        admin: ['SunLongFei-ai'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
