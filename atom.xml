@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunlongfei-ai.github.io</id>
     <title>一只小强强</title>
-    <updated>2020-05-12T14:07:21.402Z</updated>
+    <updated>2020-05-15T06:22:01.619Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunlongfei-ai.github.io"/>
     <link rel="self" href="https://sunlongfei-ai.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://sunlongfei-ai.github.io/images/avatar.png</logo>
     <icon>https://sunlongfei-ai.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 一只小强强</rights>
+    <entry>
+        <title type="html"><![CDATA[时]]></title>
+        <id>https://sunlongfei-ai.github.io/post/shi/</id>
+        <link href="https://sunlongfei-ai.github.io/post/shi/">
+        </link>
+        <updated>2020-05-15T06:17:02.000Z</updated>
+        <content type="html"><![CDATA[<p>突然感觉恍若隔世？<br>
+又或者一梦黄粱<br>
+历历在目的<br>
+也就数昨天了<br>
+想起放假的我<br>
+高高兴兴<br>
+可却又有挡不住的<br>
+另一类感受<br>
+就好像生活缺少了点东西<br>
+好在<br>
+还能看看日落<br>
+虽说赶不上日出<br>
+总是在早早暮暮之间<br>
+来回盘旋<br>
+空有想法<br>
+白费口舌<br>
+思来想去<br>
+徒劳罢了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[马原]]></title>
         <id>https://sunlongfei-ai.github.io/post/ma-yuan/</id>
